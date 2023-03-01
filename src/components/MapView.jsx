@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import L from 'leaflet'
 import {MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet'
 import { useMap } from 'react-leaflet/hooks'
@@ -9,11 +9,14 @@ import MarkerIcon from '../assets/icon-location.svg'
 const MapView = ({ipInfo}) => {
   const [position, setPosition] = useState([-26.82414,-65.2226])
 
+  const mapRef=useRef()
+
   useEffect(() => {
         if(ipInfo){
             let lat= ipInfo.location.lat
             let long= ipInfo.location.lng
             setPosition([lat,long])
+            mapRef.current.flyTo([lat,long])
             
         }else{
             console.log('loading...')
@@ -31,7 +34,7 @@ const MapView = ({ipInfo}) => {
   return (
     <>
     <section>
-    <MapContainer center={[0,0]} zoom={2} scrollWheelZoom={true}>
+    <MapContainer ref={mapRef} center={[0,0]} zoom={10} scrollWheelZoom={true}>
       <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -45,7 +48,7 @@ const MapView = ({ipInfo}) => {
   </Marker>
 </MapContainer>
     </section>
-  <footer class="attribution position-absolute bottom-0">
+  <footer className="attribution position-absolute bottom-0">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a target="_blank" href="https://github.com/Gonzalomorales1001">Gonzalo Morales</a>.
   </footer>
