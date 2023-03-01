@@ -23,6 +23,6 @@ This is a solution to the [IP Adress Tracker App Challenge by FrontEndMentor](ht
 
 ### Links
 
-[Netlify]()
+[Netlify](https://iptracker-gm.netlify.app/)
 
-[FrontEnd Mentor]()
+[FrontEnd Mentor](https://www.frontendmentor.io/solutions/ip-adress-tracking-using-reactjs-ip-geolocation-api-and-leaflet-maps-m82r5RaHHn)
