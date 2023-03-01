@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { requestGeoAPI } from './helpers/geolocationAPI'
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import HeaderComponent from './components/HeaderComponent'
-import './app.css'
+import './App.css'
 import MapView from './components/MapView'
 
 
