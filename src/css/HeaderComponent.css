@@ -1,0 +1,84 @@
+.header{
+    background-image: url('/src/assets/pattern-bg-desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    position: relative;
+}
+
+:root{
+    --VeryDarkGray: hsl(0, 0%, 17%);
+    --DarkGray: hsl(0, 0%, 59%);
+  }
+
+.form-control:focus{
+    outline: none;
+    border: none;
+}
+
+.form-control:active{
+    outline:none;
+    border:none;
+}
+
+.search{
+    width: 75%;
+    display: flex;
+    margin: 0px auto;
+}
+
+.search input{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.search button{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.ip-info{
+    width: 90vw;
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    font-weight: 700;
+    z-index: 20;
+}
+
+.ip-info__section{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--DarkGray);
+    font-size: x-small;
+}
+
+.ip-info__data{
+    font-size: larger;
+    font-weight: 500;
+    width: 80%;
+}
+
+@media (min-width: 576px) {
+    .header{
+        height: 35vh;
+    }
+
+    .search{
+        width: 50%;
+    }
+
+    .ip-info{
+        width: 75vw;
+        top: 45%;
+    }
+}

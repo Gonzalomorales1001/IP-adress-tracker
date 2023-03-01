@@ -1,0 +1,21 @@
+.leaflet-container{
+    width: 100vw;
+    height: 65vh;
+    z-index: 1;
+}
+
+.leaflet-popup, .leaflet-popup-content-wrapper, .leaflet-popup-tip{
+    z-index: 99;
+}
+
+.attribution{
+    z-index: 88;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* .leaflet-control-container{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+} */
